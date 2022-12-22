@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+
 import rospy
 from sensor_msgs.msg import Imu, Image, CompressedImage
 from mavros_msgs.msg import StatusText, VFR_HUD
 import cv2
 from cv_bridge import CvBridge, CvBridgeError
 
-class MainClass:
+class AUVCIRTESU:
   def __init__(self) -> None:
     # Create publisher
     # self.publisher = rospy.Publisher("/test",String,queue_size=1)
@@ -49,8 +51,8 @@ class MainClass:
   
 if __name__ == "__main__":
   # Initialize the node with rospy
-  rospy.init_node('main_node')
+  rospy.init_node('auv_CIRTESU', anonymous=True)
   # Create an instance of the class
-  main = MainClass()
+  main = AUVCIRTESU()
   # spin to keep the script for exiting
   rospy.spin()

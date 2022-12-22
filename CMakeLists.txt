@@ -30,6 +30,14 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_python_setup()
 
 ################################################
+## Declare ROS dynamic reconfigure parameters ##
+################################################
+
+generate_dynamic_reconfigure_options(
+  cfg/teleop_joy.cfg
+)
+
+################################################
 ## Declare ROS messages, services and actions ##
 ################################################
 
@@ -160,6 +168,10 @@ include_directories(
 #############
 ## Install ##
 #############
+
+add_executable(teleop_xbox src/teleop_xbox.cpp)
+add_dependencies(teleop_xbox ${catkin_EXPORTED_TARGETS} bluerov_interface_gencfg)
+target_link_libraries(teleop_xbox ${catkin_LIBRARIES})
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html

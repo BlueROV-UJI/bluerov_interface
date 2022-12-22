@@ -14,12 +14,12 @@
     </node>
 
     <!-- start telexbox to convert joystick values into vel -->
-    <node pkg="blue_ros" type="teleop_ps4" name="teleop_ps4" output="screen">
+    <!-- <node pkg="bluerov_interface" type="teleop_ps4" name="teleop_ps4" output="screen"> -->
+    <node pkg="bluerov_interface" type="teleop_xbox" name="teleop_xbox" output="screen">
     </node>
 
     <arg name="arg1" default="--device /dev/ttyUSB0"/>
-
-    <node respawn="true" pkg="blue_ros" type="auv_CIRTESU.py" name="auv_CIRTESU" output="screen"
+    <node respawn="true" pkg="bluerov_interface" type="auv_CIRTESU.py" name="auv_CIRTESU" output="screen"
            ></node>
     </group>
 </launch>

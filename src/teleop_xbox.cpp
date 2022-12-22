@@ -12,7 +12,7 @@
 #include <sensor_msgs/Joy.h>
 #include <std_msgs/Bool.h>
 #include <dynamic_reconfigure/server.h>
-#include <autonomous_rov/teleop_xboxConfig.h>
+#include <bluerov_interface/teleop_xboxConfig.h>
 
 class TeleopXbox {
   public:
