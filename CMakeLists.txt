@@ -34,7 +34,7 @@ catkin_python_setup()
 ################################################
 
 generate_dynamic_reconfigure_options(
-  cfg/teleop_joy.cfg
+  cfg/teleop_xbox.cfg
 )
 
 ################################################
